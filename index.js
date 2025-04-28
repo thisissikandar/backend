@@ -57,4 +57,4 @@ connectDB()
   });
 
 
-export default app;
+export default server;
