@@ -23,7 +23,9 @@ const io = new Server(server, {
 console.log("Socket.io server initialized");
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin:"https://frontend-egxb.vercel.app"
+}));
 app.use(express.json());
 
 app.use((req, res, next) => {
