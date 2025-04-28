@@ -34,6 +34,9 @@ app.use((req, res, next) => {
   next();
 });
 // Routes
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/orders", orderRoutes);
 
