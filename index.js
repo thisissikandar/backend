@@ -50,8 +50,11 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 3001;
 connectDB()
   .then(() => {
-    server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    console.log(`Database connected`);
   })
   .catch((err) => {
-    logger.error("server starting error", err);
+    logger.error("Database connection error", err);
   });
+
+
+export default app;
