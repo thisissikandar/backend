@@ -15,7 +15,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -24,7 +24,7 @@ console.log("Socket.io server initialized");
 
 // Middleware
 app.use(cors({
-  origin:"https://frontend-egxb.vercel.app"
+  origin:"*"
 }));
 app.use(express.json());
 
